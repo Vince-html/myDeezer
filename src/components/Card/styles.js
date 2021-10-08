@@ -29,8 +29,7 @@ export const ImageWrapper = styled.div`
 export const ContentWrapper = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 `;
 
 export const PlayWrapper = styled.div`
@@ -38,6 +37,7 @@ export const PlayWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 5px;
 
   p {
     font-size: 0.75rem;
@@ -48,7 +48,7 @@ export const PlayWrapper = styled.div`
 export const TitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
-
+  padding: 5px;
   justify-content: space-around;
 
   p {
@@ -57,10 +57,11 @@ export const TitleWrapper = styled.div`
 `;
 
 export const FavoritesWrapper = styled.div`
+  align-self: baseline;
   svg {
     width: 30px;
     height: 30px;
-    color: ;
+    margin-top: 4px;
     cursor: pointer;
 
     &:hover {

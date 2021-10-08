@@ -5,7 +5,9 @@ import { useSelector } from 'react-redux';
 import Loading from './../Loading/index';
 
 export function Cardlist({ data }) {
-  const { loading, loadingList } = useSelector((state) => state.musicList);
+  const { loading, loadingList, openMenu } = useSelector(
+    (state) => state.musicList
+  );
   if (loading) return <Loading />;
 
   if (typeof data === undefined) {
@@ -18,7 +20,7 @@ export function Cardlist({ data }) {
     return (
       <>
         <Container>
-          <SectionCard>
+          <SectionCard openMenu={openMenu}>
             {data.map((item) => (
               <Card item={item} key={item.id} audioId={item.id} />
             ))}

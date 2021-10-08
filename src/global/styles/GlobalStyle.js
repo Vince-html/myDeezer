@@ -18,6 +18,10 @@ const GlobalStyle = createGlobalStyle`
       display: flex;
 }
  }
+
+ h3 {
+      font-size: 0.85rem;
+ }
 `;
 
 export default GlobalStyle;
