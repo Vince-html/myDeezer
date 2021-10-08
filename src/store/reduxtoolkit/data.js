@@ -10,6 +10,7 @@ const musicList = createSlice({
     error: false,
     infinite: true,
     loadingList: false,
+    openMenu: false,
   },
   reducers: {
     fetchStarted(state) {
@@ -37,6 +38,9 @@ const musicList = createSlice({
     addPage(state) {
       state.pages++;
     },
+    setOpenMenu(state, action) {
+      state.openMenu = action.payload;
+    },
   },
 });
 
@@ -49,6 +53,7 @@ export const {
   listSearch,
   setCheckBox,
   setListOnFavorite,
+  setOpenMenu,
 } = musicList.actions;
 
 export default musicList.reducer;

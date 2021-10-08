@@ -1,18 +1,23 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import searchIcon from '../../assets/iconsearch.svg';
-import { setCheckBox } from '../../store/reduxtoolkit/data';
+import { setCheckBox, setOpenMenu } from '../../store/reduxtoolkit/data';
 
 import { Container, InputWrapper, SelectWrapper } from './styles';
 
 export function Search() {
-  const { searchState } = useSelector((state) => state.musicList);
+  const { searchState, openMenu } = useSelector((state) => state.musicList);
   const [selectCheckbox, setSelectCheckbox] = useState(searchState);
-
-  const [inputValue, setInputValue] = useState('');
   const dispatch = useDispatch();
+  const [inputValue, setInputValue] = useState('');
+
+  function handleCloseOpenMenu() {
+    dispatch(setOpenMenu(!openMenu));
+  }
+
   function handleSetFilterMusic(e) {
     e.preventDefault();
+    handleCloseOpenMenu();
     dispatch({
       type: 'SET_SEARCH_MUSIC',
       selectCheckbox: selectCheckbox,

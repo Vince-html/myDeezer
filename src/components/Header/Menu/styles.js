@@ -24,6 +24,7 @@ export const NavLink = styled.nav`
     color: #fff;
     text-decoration: none;
     margin-left: 24px;
+    padding: 0.75rem;
     cursor: pointer;
     font-weight: bold;
     font-size: 24px;

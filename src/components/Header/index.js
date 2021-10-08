@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import {
   Container,
   LogoWrapper,
@@ -10,26 +10,16 @@ import Logo from '../../assets/logo.svg';
 import { Menu } from './Menu';
 import { Search } from '../Search';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { useSelector, useDispatch } from 'react-redux';
+import { setOpenMenu } from '../../store/reduxtoolkit/data';
 
 export function Header() {
-  const [openMenu, setOpenMenu] = useState(false);
-  const node = useRef();
+  const { openMenu } = useSelector((state) => state.musicList);
+  const dispatch = useDispatch();
 
-  const useOnClickOutside = (ref, handler) => {
-    useEffect(() => {
-      const listener = (event) => {
-        if (!ref.current || ref.current.contains(event.target)) {
-          return;
-        }
-        handler(event);
-      };
-      document.addEventListener('mousedown', listener);
-      return () => {
-        document.removeEventListener('mousedown', listener);
-      };
-    }, [ref, handler]);
-  };
-  useOnClickOutside(node, () => setOpenMenu(false));
+  function handleCloseOpenMenu() {
+    dispatch(setOpenMenu(!openMenu));
+  }
 
   return (
     <>
@@ -37,14 +27,14 @@ export function Header() {
         <LogoWrapper>
           <img src={Logo} alt='Logo MyDeezer' />
         </LogoWrapper>
-        <SearchWrapper ref={node} open={openMenu}>
-          <Search ref={node} />
+        <SearchWrapper open={openMenu}>
+          <Search />
         </SearchWrapper>
 
         <MenuWrapper open={openMenu}>
-          <Menu node={node} />
+          <Menu />
         </MenuWrapper>
-        <IconsWrapper onClick={() => setOpenMenu(!openMenu)} open={openMenu}>
+        <IconsWrapper onClick={() => handleCloseOpenMenu()} open={openMenu}>
           {!openMenu ? <AiOutlineMenu /> : <AiOutlineClose />}
         </IconsWrapper>
       </Container>
