@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { addToFavorite } from '../../store/modules/reduxtoolkit/favoriteList';
+
 import { useSelector, useDispatch } from 'react-redux';
-import { setListOnFavorite } from '../../store/modules/reduxtoolkit/data';
 
 import {
   Container,
@@ -15,6 +14,8 @@ import {
 import { Play } from '../ButtonPlayer/Play/index';
 import { Pause } from '../ButtonPlayer/Pause';
 import { FavoriteButton } from '../ButtonPlayer/Favorite';
+import { addToFavorite } from '../../store/reduxtoolkit/favoriteList';
+import { setListOnFavorite } from '../../store/reduxtoolkit/data';
 
 export function Card({ item, audioId }) {
   const [playing, setPlaying] = useState(false);

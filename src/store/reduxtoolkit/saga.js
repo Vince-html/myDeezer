@@ -1,5 +1,5 @@
 import { put, call } from 'redux-saga/effects';
-import api from '../../../global/services/api';
+import api from '../../global/services/api';
 import { listMore, fetchError, fetchStarted, listSearch } from './data';
 
 export function* loadMusicList(action) {

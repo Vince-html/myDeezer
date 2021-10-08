@@ -5,14 +5,12 @@ import { MyPage } from '../views/MyPage';
 import { useDispatch, useSelector } from 'react-redux';
 
 import Loading from '../components/Loading';
-import { ActionTypes } from '../store/modules/constants/actions-types';
-
 function Routes() {
   const { loading } = useSelector((state) => state.musicList);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch({ type: ActionTypes.GET_LIST_MUSIC });
+    dispatch({ type: 'GET_LIST_MUSIC' });
   }, [dispatch]);
 
   if (loading) return <Loading />;

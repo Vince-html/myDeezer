@@ -41,7 +41,7 @@ export function Header() {
           <Search />
         </SearchWrapper>
 
-        <MenuWrapper open={openMenu}>
+        <MenuWrapper ref={node} open={openMenu}>
           <Menu />
         </MenuWrapper>
         <IconsWrapper onClick={() => setOpenMenu(!openMenu)} open={openMenu}>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import searchIcon from '../../assets/iconsearch.svg';
-import { setCheckBox } from '../../store/modules/reduxtoolkit/data';
+import { setCheckBox } from '../../store/reduxtoolkit/data';
 
 import { Container, InputWrapper, SelectWrapper } from './styles';
 

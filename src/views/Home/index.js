@@ -3,10 +3,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Cardlist } from '../../components/CardList';
 import Loading from '../../components/Loading';
-import {
-  addPage,
-  fetchListLoading,
-} from '../../store/modules/reduxtoolkit/data';
+import { addPage, fetchListLoading } from '../../store/reduxtoolkit/data';
 
 function Home() {
   const { loading, list, infinite, pages } = useSelector(
@@ -20,7 +17,7 @@ function Home() {
       if (infinite) {
         const scroll = window.scrollY;
         const height = document.body.offsetHeight - window.innerHeight;
-        if (scroll > height * 0.5 && !wait) {
+        if (scroll > height * 0.8 && !wait) {
           dispatch(addPage());
           dispatch(fetchListLoading());
           dispatch({
@@ -30,7 +27,7 @@ function Home() {
           wait = true;
           setTimeout(() => {
             wait = false;
-          }, 100);
+          }, 4000);
         }
       }
     }
