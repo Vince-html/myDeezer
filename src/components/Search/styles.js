@@ -47,6 +47,10 @@ export const SelectWrapper = styled.div`
     outline: none;
     cursor: pointer;
     margin-right: 5px;
+    @media ${({ theme }) => theme.media.break768} {
+      width: 0;
+      height: 0;
+    }
   }
   input[type='radio']:checked {
     background: ${({ theme }) => theme.colors.secondary} -19px top no-repeat;
@@ -57,15 +61,8 @@ export const SelectWrapper = styled.div`
   }
 
   label {
-    cursor: pointer;
-
     &:hover {
       color: ${({ theme }) => theme.colors.secondary};
-    }
-
-    @media ${({ theme }) => theme.media.break768} {
-      width: 0;
-      height: 0;
     }
   }
 `;

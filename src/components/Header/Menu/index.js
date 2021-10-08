@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, NavLink } from './styles';
 
-export function Menu() {
+export function Menu({ node }) {
   return (
     <Container>
       <NavLink>

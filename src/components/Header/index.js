@@ -38,11 +38,11 @@ export function Header() {
           <img src={Logo} alt='Logo MyDeezer' />
         </LogoWrapper>
         <SearchWrapper ref={node} open={openMenu}>
-          <Search />
+          <Search ref={node} />
         </SearchWrapper>
 
-        <MenuWrapper ref={node} open={openMenu}>
-          <Menu />
+        <MenuWrapper open={openMenu}>
+          <Menu node={node} />
         </MenuWrapper>
         <IconsWrapper onClick={() => setOpenMenu(!openMenu)} open={openMenu}>
           {!openMenu ? <AiOutlineMenu /> : <AiOutlineClose />}
