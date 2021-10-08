@@ -33,7 +33,7 @@ Iniciei a aplicação usando o Redux puro, mas percebi que seria melhor usar o r
 
 
 ### Para a instalação 
-Copie o repositório com o git clone #url;
-Apos isso execute **yarn** para instalação das dependências;
-E então de um **yarn start** para a aplicação rodar no seu Navegador;
+Copie o repositório com o git clone #url;<br>
+Apos isso execute **yarn** ou **npm** para instalação das dependências; <br>
+E então de um **yarn** ou **npm start** para a aplicação rodar no seu Navegador;
 
