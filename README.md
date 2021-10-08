@@ -8,15 +8,19 @@
 
 ## Sobre:
 
+O projeto consiste em fazer uma aplicação que utiliza a API do deezer e puxa a listagem das top musicas da plataforma. Seguindo o briefing, a orientação solicitava que houvesse as seguintes opções de filtros: Artista, Música e Álbum. Além dos filtros, o projeto pedia que uma lista de favoritos também fosse projetada.
 
+Infelizmente, por ser uma aplicação somente de front-end, a plataforma deezer apresenta alguns problemas de CORS.
 
-O projeto consistia em fazer uma aplicação que consumisse a API do deezer, puxando a listagem das top musicas, tendo a opção de procura por 3 tipos de filtros(Artista, Música e Álbum), além claro de poder salvar nos favoritos. 
-
-
-
-Infelizmente por ser uma aplicação somente de front-end, o deezer não aceita muito bem o consumo da api deles, tendo assim problemas com CORS, na breve pesquisa que fiz, percebi que teria que ter um back-end consumindo a api e me repassando os dados. Porém, dei uma contornada com um proxy, para pode fazer toda a estrutura. Inclusive ela esta disponivel na vercel. 
+Na breve pesquisa que fiz, pude perceber que teria que ter um back-end consumindo a API e me repassando os dados. Com o conhecimento adquirido dos meus estudos, a solução encontrada foi pelo proxy, para assim, poder fazer toda a estrutura. Inclusive ela esta disponível na vercel
 
 [Link Vercel](https://my-deezer.vercel.app/)
+
+O caminho trilhado para a aplicação inicou usando o Redux puro, mas, ao longo da jornada, percebi que seria mais interessante usar o reduxToolkit, o que hoje seria mais atual. Optei também em usar o redux-saga para as chamas na API, por ja ter mais familiaridade com ele.
+
+Sigo trilhando por busca de mais conhecimento e todo feedback é bem-vindo.
+
+
 
 
 ## Tecnologias

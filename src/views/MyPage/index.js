@@ -11,7 +11,9 @@ export function MyPage() {
 
   if (typeof listFavorites === undefined || listFavorites.length === 0) {
     return (
-      <h2 style={{ marginTop: '5rem' }}>Ops parece que sua lista está vazia</h2>
+      <h2 style={{ marginTop: '10rem' }}>
+        Ops parece que sua lista está vazia
+      </h2>
     );
   }
 
