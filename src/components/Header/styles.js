@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   height: 90px;
-  position: ${({ open }) => (open ? 'fixed' : 'initial')};
+  position: fixed;
+
   padding: 0 60px;
   display: flex;
   justify-content: space-between;

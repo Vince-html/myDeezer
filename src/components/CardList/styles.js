@@ -13,7 +13,7 @@ export const Container = styled.div``;
 
 export const SectionCard = styled.section`
   width: 100%;
-  margin-top: ${({ openMenu }) => (openMenu ? '10rem' : '5rem')};
+  margin-top: 10rem;
   display: grid;
   grid-template-columns: repeat(3, minmax(400px, 500px));
   gap: 20px;
