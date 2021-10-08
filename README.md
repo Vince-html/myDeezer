@@ -16,6 +16,9 @@ O projeto consistia em fazer uma aplicação que consumisse a API do deezer, pux
 
 Infelizmente por ser uma aplicação somente de front-end, o deezer não aceita muito bem o consumo da api deles, tendo assim problemas com CORS, na breve pesquisa que fiz, percebi que teria que ter um back-end consumindo a api e me repassando os dados. Porém, dei uma contornada com um proxy, para pode fazer toda a estrutura. Inclusive ela esta disponivel na vercel. 
 
+
+Iniciei a aplicação usando o Redux puro, mas percebi que seria melhor usar o reduxToolkit, o que hoje seria mais moderno. Optei também em usar o redux-saga para as chamas na api, por ja ter mais familiaridade com ele. 
+
 [Link Vercel](https://my-deezer.vercel.app/)
 
 
