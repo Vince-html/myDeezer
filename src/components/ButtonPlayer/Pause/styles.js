@@ -24,12 +24,18 @@ export const ButtonFavorite = styled.button`
     width: 30px;
     height: 30px;
 
+    border-radius: 50%;
+
     color: ${({ favorite, theme }) =>
       favorite ? theme.colors.secondary : '#fff'};
     cursor: pointer;
 
     &:hover {
       color: ${({ theme }) => theme.colors.secondary};
+    }
+
+    @media ${({ theme }) => theme.media.break540} {
+      background-color: rgba(0, 0, 0, 0.5);
     }
   }
 `;

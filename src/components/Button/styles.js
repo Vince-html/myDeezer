@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const BtnListener = styled.button`
   padding: 4px 8px;
-  border-radius: 10px;
+  border-radius: 5px;
   background: ${({ theme }) => theme.colors.secondary};
   cursor: pointer;
   border: none;
