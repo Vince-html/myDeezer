@@ -20,7 +20,6 @@ export const Container = styled.div`
     padding: 0px;
     justify-content: ${({ open }) => (open ? 'center' : 'space-between')};
     flex-direction: ${({ open }) => (open ? 'column' : 'row')};
-    gap: 5rem;
   }
 `;
 
